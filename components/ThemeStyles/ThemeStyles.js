@@ -22,6 +22,13 @@ const themes = {
     '--color-tertiary': '#CCCCCC',
     '--color-white': '#FFFFFF',
   },
+  zalii: {
+    '--color-black': '#000',
+    '--color-primary': '#4a0d66',
+    '--color-secondary': '#0084AD',
+    '--color-tertiary': '#72D0EB',
+    '--color-white': '#FFFFFF',
+  },
 };
 
 export default function ThemeStyles() {
