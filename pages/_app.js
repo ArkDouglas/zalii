@@ -1,20 +1,24 @@
-import '../faust.config';
-import React from 'react';
-import { useRouter } from 'next/router';
-import { FaustProvider } from '@faustwp/core';
-import 'normalize.css/normalize.css';
-import '../styles/main.scss';
-import ThemeStyles from 'components/ThemeStyles/ThemeStyles';
+import fetchJson from "lib/fetchJson";
+import { SWRConfig } from "swr";
 
-export default function MyApp({ Component, pageProps }) {
-  const router = useRouter();
+import { ApolloProvider } from "@apollo/client";
+import client from "../lib/apollo-client";
 
+function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <ThemeStyles />
-      <FaustProvider pageProps={pageProps}>
-        <Component {...pageProps} key={router.asPath} />
-      </FaustProvider>
-    </>
+    <SWRConfig
+      value={{
+        fetcher: fetchJson,
+        onError: (err) => {
+          console.error(err);
+        },
+      }}
+    >
+      <ApolloProvider client={client}>
+        <Component {...pageProps} />
+      </ApolloProvider>
+    </SWRConfig>
   );
 }
+
+export default MyApp;

@@ -1,14 +1,15 @@
-import { useState } from 'react';
-import classNames from 'classnames/bind';
-import { FaBars, FaSearch } from 'react-icons/fa';
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { FaBars, FaSearch } from "react-icons/fa";
+import classNames from "../../node_modules/classnames/index";
+import NavigationMenu from "../NavigationMenu/index";
+import SkipNavigationLink from "../SkipNavigationLink/index";
 
-import { NavigationMenu, SkipNavigationLink } from '../';
-
-import styles from './Header.module.scss';
+import styles from "./Header.module.scss";
 let cx = classNames.bind(styles);
 /**
+ *
  * A Header component
  * @param {Props} props The props object.
  * @param {string} props.className An optional className to be added to the container.
@@ -17,18 +18,18 @@ let cx = classNames.bind(styles);
 export default function Header({ className, menuItems }) {
   const [isNavShown, setIsNavShown] = useState(false);
 
-  const headerClasses = cx('header', className);
+  const headerClasses = cx("header", className);
   const navClasses = cx(
-    'primary-navigation',
-    isNavShown ? cx('show') : undefined
+    "primary-navigation",
+    isNavShown ? cx("show") : undefined
   );
 
   return (
     <header className={headerClasses}>
       <SkipNavigationLink />
       <div className="container">
-        <div className={cx('bar')}>
-          <div className={cx('logo')}>
+        <div className={cx("bar")}>
+          <div className={cx("logo")}>
             <Link href="/">
               <a title="Home">
                 <Image
@@ -43,16 +44,16 @@ export default function Header({ className, menuItems }) {
           </div>
           <button
             type="button"
-            className={cx('nav-toggle')}
+            className={cx("nav-toggle")}
             onClick={() => setIsNavShown(!isNavShown)}
             aria-label="Toggle navigation"
-            aria-controls={cx('primary-navigation')}
+            aria-controls={cx("primary-navigation")}
             aria-expanded={isNavShown}
           >
             <FaBars />
           </button>
           <NavigationMenu
-            id={cx('primary-navigation')}
+            id={cx("primary-navigation")}
             className={navClasses}
             menuItems={menuItems}
           >
