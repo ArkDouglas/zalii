@@ -25,7 +25,6 @@ export default function Header({ className, menuItems }) {
 
   return (
     <header className={headerClasses}>
-      sdfd
       <div className="container">
         <div className={cx("bar")}>
           <div className={cx("logo")}>
@@ -53,8 +52,7 @@ export default function Header({ className, menuItems }) {
           </button>
           <NavigationMenu
             id={cx("primary-navigation")}
-            className={navClasses}
-            menuItems={menuItems}
+            className={cx(navClasses)}
           ></NavigationMenu>
         </div>
       </div>

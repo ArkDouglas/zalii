@@ -1,11 +1,13 @@
+import classNames from "classnames/bind";
+import styles from "./Navigation.module.scss";
+
 export default function NavigationMenu({ className, children }) {
+  let cx = classNames.bind(styles);
+
   return (
-    <nav id={className} className={className}>
-      <div
-        className="primary-navigation collapse navbar-collapse justify-content-end"
-        id="navbarNav"
-      >
-        <ul className="navbar-nav">
+    <nav className={className}>
+      <div className="container">
+        <ul className={cx("navbar-nav")}>
           <li className="nav-item active">
             <a className="nav-link" href="#">
               Home
