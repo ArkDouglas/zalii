@@ -5,6 +5,7 @@ import client from "lib/apollo-client";
 import fetchJson from "lib/fetchJson";
 import "normalize.css/normalize.css";
 
+import "styles/globals.css";
 import "styles/main.scss";
 import { SWRConfig } from "swr";
 function MyApp({ Component, pageProps }) {

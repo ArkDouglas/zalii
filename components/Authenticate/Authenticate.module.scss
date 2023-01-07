@@ -1,0 +1,13 @@
+@import "styles/Variables";
+
+
+#login-main {
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: $content-max-width;
+  position: relative;
+  align-content: center;
+}
