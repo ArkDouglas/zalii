@@ -1,49 +1,28 @@
-import { gql } from '@apollo/client';
-import Link from 'next/link';
-
-export default function NavigationMenu({ menuItems, className, children }) {
-  if (!menuItems) {
-    return null;
-  }
-
-  if (!menuItems) {
-    return null;
-  }
-
+export default function NavigationMenu({ className, children }) {
   return (
-    <nav
-      className={className}
-      role="navigation"
-      aria-label={`${menuItems[0]?.menu.node.name} menu`}
-    >
-      <ul className="menu">
-        {menuItems.map((item) => {
-          const { id, path, label } = item;
-          return (
-            <li key={id ?? ''}>
-              <Link href={path ?? ''}>{label ?? ''}</Link>
-            </li>
-          );
-        })}
-        {children}
-      </ul>
+    <nav id={className} className={className}>
+      <div
+        className="primary-navigation collapse navbar-collapse justify-content-end"
+        id="navbarNav"
+      >
+        <ul className="navbar-nav">
+          <li className="nav-item active">
+            <a className="nav-link" href="#">
+              Home
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              About
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }
-
-NavigationMenu.fragments = {
-  entry: gql`
-    fragment NavigationMenuItemFragment on MenuItem {
-      id
-      path
-      label
-      parentId
-      cssClasses
-      menu {
-        node {
-          name
-        }
-      }
-    }
-  `,
-};

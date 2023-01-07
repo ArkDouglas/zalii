@@ -33,18 +33,18 @@ const appConfig = {
    * This app's primary color.
    * @see {@link https://github.com/wpengine/atlas-blueprint-portfolio/blob/main/src/components/ThemeStyles/ThemeStyles.js}
    */
-  themeColor: 'zalii',
+  themeColor: "zalii",
 
   /**
    * @type {[key: 'twitterUrl' | 'facebookUrl' | 'instagramUrl' | 'youtubeUrl' | 'githubUrl' | 'linkedinUrl']: string}
    */
   socialLinks: {
-    twitterUrl: 'https://twitter.com/wpengine',
-    facebookUrl: 'https://www.facebook.com/wpengine',
-    instagramUrl: 'https://www.instagram.com/wpengine/',
-    youtubeUrl: 'https://youtube.com/wpengine',
-    githubUrl: 'https://github.com/wpengine',
-    linkedinUrl: 'https://www.linkedin.com/company/wpengine',
+    twitterUrl: "https://twitter.com/wpengine",
+    facebookUrl: "https://www.facebook.com/wpengine",
+    instagramUrl: "https://www.instagram.com/wpengine/",
+    youtubeUrl: "https://youtube.com/wpengine",
+    githubUrl: "https://github.com/wpengine",
+    linkedinUrl: "https://www.linkedin.com/company/wpengine",
   },
 };
 

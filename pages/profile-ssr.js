@@ -1,10 +1,9 @@
-import Layout from "components/Layout/Layout";
 import { withIronSessionSsr } from "iron-session/next";
 import { sessionOptions } from "lib/session";
 
 export default function SsrProfile({ user }) {
   return (
-    <Layout>
+    <>
       <h1>Your GitHub profile</h1>
       <h2>
         This page uses{" "}
@@ -23,7 +22,7 @@ export default function SsrProfile({ user }) {
           <pre>{JSON.stringify(user, null, 2)}</pre>
         </>
       )}
-    </Layout>
+    </>
   );
 }
 

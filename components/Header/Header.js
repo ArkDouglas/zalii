@@ -1,10 +1,9 @@
+import classNames from "classnames/bind";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaBars, FaSearch } from "react-icons/fa";
-import classNames from "../../node_modules/classnames/index";
-import NavigationMenu from "../NavigationMenu/index";
-import SkipNavigationLink from "../SkipNavigationLink/index";
+import { FaBars } from "react-icons/fa";
+import NavigationMenu from "../NavigationMenu";
 
 import styles from "./Header.module.scss";
 let cx = classNames.bind(styles);
@@ -26,7 +25,7 @@ export default function Header({ className, menuItems }) {
 
   return (
     <header className={headerClasses}>
-      <SkipNavigationLink />
+      sdfd
       <div className="container">
         <div className={cx("bar")}>
           <div className={cx("logo")}>
@@ -34,9 +33,9 @@ export default function Header({ className, menuItems }) {
               <a title="Home">
                 <Image
                   src="/logo.png"
-                  width={400}
-                  height={80}
-                  alt="Blueprint media logo"
+                  width={200}
+                  height={40}
+                  alt="logo"
                   layout="responsive"
                 />
               </a>
@@ -56,15 +55,7 @@ export default function Header({ className, menuItems }) {
             id={cx("primary-navigation")}
             className={navClasses}
             menuItems={menuItems}
-          >
-            <li>
-              <Link href="/search">
-                <a>
-                  <FaSearch title="Search" role="img" />
-                </a>
-              </Link>
-            </li>
-          </NavigationMenu>
+          ></NavigationMenu>
         </div>
       </div>
     </header>

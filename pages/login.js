@@ -1,5 +1,4 @@
 import ClientOnly from "components/ClientOnly";
-import Layout from "components/Layout/Layout";
 import Providers from "components/Providers";
 import useUser from "lib/useUser";
 import { useState } from "react";
@@ -13,7 +12,7 @@ export default function Login() {
   const [errorMsg, setErrorMsg] = useState("");
 
   return (
-    <Layout>
+    <>
       <div className="login">
         <ClientOnly>
           <Providers></Providers>
@@ -55,7 +54,7 @@ export default function Login() {
           border-radius: 4px;
         }
       `}</style>
-    </Layout>
+    </>
   );
 }
 

@@ -1,4 +1,3 @@
-import Layout from "components/Layout/Layout";
 import useEvents from "lib/useEvents";
 import useUser from "lib/useUser";
 
@@ -11,7 +10,7 @@ export default function SgProfile() {
   console.log(user);
 
   return (
-    <Layout>
+    <>
       <h1>Your GitHub profile</h1>
       <h2>
         This page uses{" "}
@@ -46,6 +45,6 @@ export default function SgProfile() {
           )}
         </p>
       )}
-    </Layout>
+    </>
   );
 }

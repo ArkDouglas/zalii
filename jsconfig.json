@@ -27,10 +27,17 @@
     "node_modules"
   ],
   "paths": {
-    "$components/*": ["components/*"],
-    "$lib/*": ["lib/*"],
-    "$pages/*": ["pages/*"],
-    "$styles/*": ["styles/*"],
+    "$components/*": [
+      "components/*"
+    ],
+    "$lib/*": [
+      "lib/*"
+    ],
+    "$pages/*": [
+      "pages/*"
+    ],
+    "$styles/*": [
+      "styles/*"
+    ],
   }
-
 }
