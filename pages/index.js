@@ -17,7 +17,7 @@ export default function Home() {
               className="image-wrapper"
             >
               <img
-                src="images/Client-Test-1.png"
+                src="/Client-Test-1.png"
                 loading="lazy"
                 alt="Client testimonial #1"
                 className="testimonial-1"
@@ -29,7 +29,7 @@ export default function Home() {
               className="content-wrapper"
             >
               <img
-                src="images/number_one.PNG"
+                src="/number_one.PNG"
                 loading="lazy"
                 alt="Rated #1"
                 className="rating"
@@ -42,7 +42,7 @@ export default function Home() {
               className="image-wrapper"
             >
               <img
-                src="images/Client-Test-2.png"
+                src="/Client-Test-2.png"
                 loading="lazy"
                 alt="Client testimonial #2"
                 className="testimonial-2"
@@ -84,9 +84,9 @@ export default function Home() {
               className="image-wrapper"
             >
               <img
-                src="images/Rectangle.png"
+                src="/Rectangle.png"
                 loading="lazy"
-                srcSet="images/Rectangle-p-500.png 500w, images/Rectangle.png 679w"
+                srcSet="/Rectangle-p-500.png 500w, /Rectangle.png 679w"
                 sizes="100vw"
                 alt="Image place holder
 "
@@ -154,7 +154,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* [if lte IE 9]><![endif] */}
     </>
   );
 }

@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 3rem 0;
+  padding-top: 3rem;
   gap: 2rem;
 }
 
@@ -29,7 +29,8 @@
   color: var(--color-primary);
   border: 0.1rem solid var(--color-primary);
   transition: color 0.3s ease, background-color 0.3s ease;
-
+  flex-wrap: nowrap;
+  overflow: hidden;
   &:hover,
   &:focus {
     background-color: var(--color-white);
@@ -39,6 +40,7 @@
   @media (min-width: $breakpoint-small) {
     display: none;
   }
+
 }
 
 .primary-navigation {

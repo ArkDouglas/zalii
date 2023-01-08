@@ -14,13 +14,18 @@ export default function NavigationMenu({ className, children }) {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/photobooks">
+            <a className="nav-link" href="/design">
               Photobooks
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="/authenticate">
               Login
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/api/logout">
+              Logout
             </a>
           </li>
         </ul>

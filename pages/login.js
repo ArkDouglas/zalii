@@ -1,4 +1,3 @@
-import ClientOnly from "components/ClientOnly";
 import Providers from "components/Providers";
 import useUser from "lib/useUser";
 import { useState } from "react";
@@ -14,9 +13,7 @@ export default function Login() {
   return (
     <>
       <div className="login">
-        <ClientOnly>
-          <Providers></Providers>
-        </ClientOnly>
+        <Providers></Providers>
         {/* <Form
           errorMessage={errorMsg}
           onSubmit={async function handleSubmit(event) {

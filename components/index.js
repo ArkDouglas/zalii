@@ -1,3 +1,4 @@
+import Authenticate from "./Authenticate";
 import Button from "./Button";
 import ContentWrapper from "./ContentWrapper";
 import CTA from "./CTA";
@@ -11,11 +12,12 @@ import Layout from "./Layout";
 import LoadingSearchResult from "./LoadingSearchResult";
 import LoadMore from "./LoadMore";
 import Main from "./Main";
-import NavigationMenu from "./NavigationMenu/NavigationMenu";
+import NavigationMenu from "./NavigationMenu";
 import PostInfo from "./PostInfo/PostInfo";
 import Posts from "./Posts";
 import ProjectHeader from "./ProjectHeader";
 import Projects from "./Projects";
+import Providers from "./Providers";
 import SearchInput from "./SearchInput";
 import SearchRecommendations from "./SearchRecommendations";
 import SearchResults from "./SearchResults";
@@ -51,4 +53,6 @@ export {
   SearchRecommendations,
   LoadingSearchResult,
   Layout,
+  Providers,
+  Authenticate,
 };
