@@ -1,10 +1,13 @@
-export default function Dashboard() {
+import { withIronSessionSsr } from "iron-session/next";
+import { sessionOptions } from "lib/session";
+
+export default function Dashboard(user) {
   return (
     <div>
       <div className="hero-section-ua wf-section">
         <div className="hero-container--ua">
-          <h1 className="heading--ua">My Dashboard</h1>
-          <p className="paragraph-ua">Hi, Pick a Project to Get Started.</p>
+          <h1 className="heading--ua">Hi {user.user.name}</h1>
+          <p className="paragraph-ua">Pick a Project to Get Started.</p>
           <div className="w-layout-grid grid-3">
             <a href="/invite" className="invite-users-button w-inline-block">
               <img
@@ -30,64 +33,36 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      <div className="footer wf-section">
-        <div className="footer-container">
-          <div className="w-layout-grid _5-col-grid">
-            <div
-              id="w-node-_43303c22-7556-f068-aa1c-b56d11c9ad87-d3982caf"
-              className="empty-div"
-            />
-            <div
-              id="w-node-_43303c22-7556-f068-aa1c-b56d11c9ad88-d3982caf"
-              className="div-block"
-            >
-              <div className="subheading-footer">Contact Us</div>
-              <div className="text-block">
-                Have Questions?
-                <br />
-                Email us at{" "}
-                <a href="#" className="link-2">
-                  support@zalii.com
-                </a>
-              </div>
-              <div className="text-block">© 2022 Zalii</div>
-            </div>
-            <div
-              id="w-node-_43303c22-7556-f068-aa1c-b56d11c9ad93-d3982caf"
-              className="div-block"
-            >
-              <div className="subheading-footer">Links</div>
-              <ul role="list" className="w-list-unstyled">
-                <li>
-                  <a href="#" className="link">
-                    Terms Of Service
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="link">
-                    Privacy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="link">
-                    Returns
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div
-              id="w-node-_43303c22-7556-f068-aa1c-b56d11c9ada0-d3982caf"
-              className="div-block"
-            >
-              <div className="subheading-footer">Social Media</div>
-            </div>
-            <div
-              id="w-node-_43303c22-7556-f068-aa1c-b56d11c9ada3-d3982caf"
-              className="empty-div"
-            />
-          </div>
-        </div>
-      </div>
+      {user && (
+        <>
+          <p style={{ fontStyle: "italic" }}></p>
+
+          <pre>{JSON.stringify(user, null, 2)}</pre>
+        </>
+      )}
     </div>
   );
 }
+
+export const getServerSideProps = withIronSessionSsr(async function ({
+  req,
+  res,
+}) {
+  const user = req.session.user;
+
+  if (user === undefined) {
+    res.setHeader("location", "/login");
+    res.statusCode = 302;
+    res.end();
+    return {
+      props: {
+        user: { isLoggedIn: false, login: "", avatarUrl: "" },
+      },
+    };
+  }
+
+  return {
+    props: { user: req.session.user.user },
+  };
+},
+sessionOptions);

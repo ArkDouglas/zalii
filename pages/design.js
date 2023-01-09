@@ -1,24 +1,6 @@
 export default function Design() {
   return (
     <div>
-      {/*  This site was created in Webflow. https://www.webflow.com  */}
-      {/*  Last Published: Fri Nov 04 2022 03:00:22 GMT+0000 (Coordinated Universal Time)  */}
-      <meta charSet="utf-8" />
-      <title>Book Design</title>
-      <meta content="Book Design" property="og:title" />
-      <meta content="Book Design" property="twitter:title" />
-      <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <meta content="Webflow" name="generator" />
-      <link href="css/normalize.css" rel="stylesheet" type="text/css" />
-      <link href="css/webflow.css" rel="stylesheet" type="text/css" />
-      <link
-        href="css/zalii-book-website.webflow.css"
-        rel="stylesheet"
-        type="text/css"
-      />
-      {/* [if lt IE 9]><![endif] */}
-      <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-      <link href="images/webclip.png" rel="apple-touch-icon" />
       <div
         data-animation="default"
         data-collapse="medium"
@@ -29,15 +11,6 @@ export default function Design() {
         className="navbar--3 w-nav"
       >
         <div className="nav-container--3">
-          <a href="#" className="w-nav-brand">
-            <img
-              src="images/Zalii-Logo.png"
-              loading="lazy"
-              alt="Zalii Logo
-"
-              className="logo"
-            />
-          </a>
           <nav role="navigation" className="nav-menu-3 w-nav-menu">
             <a href="#" className="bd-share-button w-button">
               Share
@@ -48,7 +21,7 @@ export default function Design() {
             <a href="#" className="bd-preview-button w-button">
               Preview
             </a>
-            <a href="#" className="bd-order-button w-button">
+            <a href="/purchase" className="bd-order-button w-button">
               Order
             </a>
           </nav>
@@ -75,8 +48,7 @@ export default function Design() {
             <img
               src="images/purple-check-box.png"
               loading="lazy"
-              alt="Purple check box
-"
+              alt="Purple check box"
               className="purple-check-box"
             />
             <div className="ap-text-block">Hide used photos</div>
@@ -199,7 +171,6 @@ export default function Design() {
           </div>
         </div>
       </div>
-      {/* [if lte IE 9]><![endif] */}
     </div>
   );
 }

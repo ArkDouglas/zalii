@@ -71,12 +71,7 @@ export default withIronSessionApiRoute(async (req, res) => {
     const user = { data }
 
     // We now have the auth/refresh tokens for a validated WPUser, lets store them.
-    console.log('user' + user)
-    for (var dd in user.data) {
-      console.log("dd1 :  " + dd)
 
-
-    }
     for (var dd in user.data.login.user) {
       console.log("dd4:  " + dd)
 
@@ -92,7 +87,7 @@ export default withIronSessionApiRoute(async (req, res) => {
     await req.session.save();
 
     // Redirect the user from the api route back to the app.
-    res.redirect('/profile-sg');
+    res.redirect('/dashboard');
   } catch (error) {
     // Do something if authentication fails.
     const { response: fetchResponse } = error;

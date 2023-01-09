@@ -1,17 +1,6 @@
-import classNames from 'classnames/bind';
-import {
-  FaFacebookF,
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
-  FaYoutube,
-} from 'react-icons/fa';
-import appConfig from 'app.config.js';
+import classNames from "classnames/bind";
 
-import { NavigationMenu } from '../';
-
-import styles from './Footer.module.scss';
+import styles from "./Footer.module.scss";
 
 let cx = classNames.bind(styles);
 
@@ -21,106 +10,48 @@ let cx = classNames.bind(styles);
  */
 export default function Footer({ menuItems }) {
   return (
-    <footer className={cx('footer')}>
-      <div className="container">
-        {appConfig?.socialLinks && (
-          <div className={cx('social-links')}>
-            <ul aria-label="Social media">
-              {appConfig.socialLinks?.twitterUrl && (
+    <footer className={cx("footer")}>
+      <div className="footer wf-section">
+        <div className="footer-container">
+          <div className="w-layout-grid _5-col-grid">
+            <div className="empty-div" />
+            <div className="div-block">
+              <div className="subheading-footer">Contact Us</div>
+              <div className="text-block">
+                Have Questions?
+                <br />
+                Email us at{" "}
+                <a href="#" className="link-2">
+                  support@zalii.com
+                </a>
+              </div>
+              <div className="text-block">© 2023 Zalii</div>
+            </div>
+            <div className="div-block">
+              <div className="subheading-footer">Links</div>
+              <ul role="list" className="w-list-unstyled">
                 <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cx('social-icon-link')}
-                    href={appConfig.socialLinks.twitterUrl}
-                  >
-                    <FaTwitter title="Twitter" className={cx('social-icon')} />
+                  <a href="#" className="link">
+                    Terms Of Service
                   </a>
                 </li>
-              )}
-
-              {appConfig.socialLinks?.facebookUrl && (
                 <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cx('social-icon-link')}
-                    href={appConfig.socialLinks.facebookUrl}
-                  >
-                    <FaFacebookF
-                      title="Facebook"
-                      className={cx('social-icon')}
-                    />
+                  <a href="#" className="link">
+                    Privacy
                   </a>
                 </li>
-              )}
-
-              {appConfig.socialLinks?.instagramUrl && (
                 <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cx('social-icon-link')}
-                    href={appConfig.socialLinks.instagramUrl}
-                  >
-                    <FaInstagram
-                      title="Instagram"
-                      className={cx('social-icon')}
-                    />
+                  <a href="#" className="link">
+                    Returns
                   </a>
                 </li>
-              )}
-
-              {appConfig.socialLinks?.youtubeUrl && (
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cx('social-icon-link')}
-                    href={appConfig.socialLinks.youtubeUrl}
-                  >
-                    <FaYoutube title="YouTube" className={cx('social-icon')} />
-                  </a>
-                </li>
-              )}
-
-              {appConfig.socialLinks?.githubUrl && (
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cx('social-icon-link')}
-                    href={appConfig.socialLinks.githubUrl}
-                  >
-                    <FaGithub title="GitHub" className={cx('social-icon')} />
-                  </a>
-                </li>
-              )}
-
-              {appConfig.socialLinks?.linkedinUrl && (
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cx('social-icon-link')}
-                    href={appConfig.socialLinks.linkedinUrl}
-                  >
-                    <FaLinkedinIn
-                      title="LinkedIn"
-                      className={cx('social-icon')}
-                    />
-                  </a>
-                </li>
-              )}
-            </ul>
+              </ul>
+            </div>
+            <div className="div-block">
+              <div className="subheading-footer">Social Media</div>
+            </div>
+            <div className="empty-div" />
           </div>
-        )}
-
-        <NavigationMenu className={cx('nav')} menuItems={menuItems} />
-
-        <div className={cx('copyright')}>
-          &copy; {new Date().getFullYear()} Blueprint Media &#183; Powered By{' '}
-          <a href="https://wpengine.com/atlas">Atlas</a>
         </div>
       </div>
     </footer>
