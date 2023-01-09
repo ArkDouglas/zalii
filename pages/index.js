@@ -96,64 +96,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="footer wf-section">
-        <div className="footer-container">
-          <div className="w-layout-grid _5-col-grid">
-            <div
-              id="w-node-affdb31c-9a02-fdf9-4c13-f4e8fe37d194-e4c4d48b"
-              className="empty-div"
-            />
-            <div
-              id="w-node-_00be4c9b-5dca-2111-1a0d-40fe78f716d4-e4c4d48b"
-              className="div-block"
-            >
-              <div className="subheading-footer">Contact Us</div>
-              <div className="text-block">
-                Have Questions?
-                <br />
-                Email us at{" "}
-                <a href="#" className="link-2">
-                  support@zalii.com
-                </a>
-              </div>
-              <div className="text-block">© 2022 Zalii</div>
-            </div>
-            <div
-              id="w-node-_3c7c2a9c-762c-5038-02d4-148e3d10b5f9-e4c4d48b"
-              className="div-block"
-            >
-              <div className="subheading-footer">Links</div>
-              <ul role="list" className="w-list-unstyled">
-                <li>
-                  <a href="#" className="link">
-                    Terms Of Service
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="link">
-                    Privacy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="link">
-                    Returns
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div
-              id="w-node-_82f56865-f171-b30e-cc31-97a5ef41d869-e4c4d48b"
-              className="div-block"
-            >
-              <div className="subheading-footer">Social Media</div>
-            </div>
-            <div
-              id="w-node-_8323f15b-e363-a9b9-45bb-bbef23cbdf87-e4c4d48b"
-              className="empty-div"
-            />
-          </div>
-        </div>
-      </div>
     </>
   );
 }
